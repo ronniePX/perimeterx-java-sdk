@@ -128,10 +128,11 @@ PXConfiguration pxConf = new PXConfiguration.Builder()
 
 <a name="captcha-provider"></a>
 ##### Custom Parameters Provider
-Risk api requests can be enriched with custom parameters by implementing CustomParametersProvider and adding logic to extract
-the custom parameters from the request
-Before implementing the interface, please make sure to configure custom parameters on the portal.  
-Make sure when the custom parameters are configured that they are NOT marked as query string  
+Risk API requests can be enriched with user-defined custom parameters by implementing CustomParametersProvider and adding logic to extract
+the custom parameters from the request.
+
+Before implementing the below interface, please make sure to configure custom parameters on the PX Console settings (requires Admin privileges).  
+Note: Make sure that the custom parameters configured in the console are NOT marked as "query string".  
 
 ```
 public class PerimeterxCustomParamsProvider implements CustomParametersProvider {
